@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
+import 'screens/input_page.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(BMICalculator());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+          primaryColor: Color(0x0A0D22),
+          scaffoldBackgroundColor: Color(0x0A0D22)),
+      home: InputPage(),
     );
   }
 }
